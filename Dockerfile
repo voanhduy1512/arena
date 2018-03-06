@@ -11,3 +11,6 @@ RUN yarn --production
 COPY . /opt/arena/
 
 CMD ["yarn", "start"]
+
+RUN chmod -R 775 /opt/arena/
+RUN chgrp -R 0 /opt/arena/ 
